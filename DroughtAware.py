@@ -47,5 +47,5 @@ def u_collection_area(shower_gallons, rainfall):
     
 
 SF_rain_gallons = rain_gallons(SF_annual_rainfall2014, SF_area)
-annual_shower_gal(u_shower_length, u_shower_f, gpm)
-u_collection_area(annual_shower_gal, SF_annual_rainfall2014)
+u_shower_gal = annual_shower_gal(u_shower_length, u_shower_f, gpm)
+u_collection_area(u_shower_gal, SF_annual_rainfall2014)
