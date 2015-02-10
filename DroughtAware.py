@@ -36,9 +36,9 @@ def u_collection_area(shower_gallons, rainfall):
     #calculates the area of a hypothetical rain collector that the user would need to have to harvest enough water every year from rain just to shower. Again, uses cubic yards (cy) as an intermediate measure
     shower_cy = shower_gallons / gal_per_cy
     rain_yds = rainfall / 36
-    collection_area = shower_cy / rain_yds * 9 #comes out in square feet
-    collector_side_length = math.sqrt(collection_area)
-    print ("If you were to collect all the water you needed to shower for 2014 from the rain in San Francisco, you would need to build a %s square foot collector. This is equivalent to a square with a %s foot side length" %s (collection_area, collector_side_length))
+    collection_area = round(shower_cy / rain_yds * 9, 2) #comes out in square feet
+    collector_side_length = round(math.sqrt(collection_area), 2)
+    print ("If you were to collect all the water you needed to shower for 2014 from the rain in San Francisco, you would need to build a " + str(collection_area) +" square foot collector. This is equivalent to a square with a " + str(collector_side_length) + " foot side length")
     return collection_area
 
 
